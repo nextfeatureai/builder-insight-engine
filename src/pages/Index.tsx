@@ -1,13 +1,26 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { DashboardLayout } from "@/components/DashboardLayout";
+import { ChatInterface } from "@/components/ChatInterface";
+import { SuggestedFeatures } from "@/components/SuggestedFeatures";
+import { PriorityScoreCards } from "@/components/PriorityScoreCards";
+import { UploadWidget } from "@/components/UploadWidget";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <DashboardLayout>
+      <div className="flex h-screen">
+        {/* Main chat area */}
+        <div className="flex-1 flex flex-col border-r border-border min-w-0">
+          <ChatInterface />
+        </div>
+
+        {/* Right panel */}
+        <div className="w-80 flex-shrink-0 overflow-y-auto p-4 space-y-6 hidden lg:block">
+          <PriorityScoreCards />
+          <SuggestedFeatures />
+          <UploadWidget />
+        </div>
       </div>
-    </div>
+    </DashboardLayout>
   );
 };
 
