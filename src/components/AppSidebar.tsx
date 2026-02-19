@@ -7,6 +7,7 @@ import {
   Upload,
   Lightbulb,
   Map,
+  Plug,
   Settings,
   Sparkles,
   ChevronLeft,
@@ -17,6 +18,7 @@ import {
 const navItems = [
   { title: "Home", url: "/dashboard", icon: Home },
   { title: "Uploads", url: "/uploads", icon: Upload },
+  { title: "Integrations", url: "/integrations", icon: Plug },
   { title: "Insights", url: "/insights", icon: Lightbulb },
   { title: "Roadmap", url: "/roadmap", icon: Map },
   { title: "Settings", url: "/settings", icon: Settings },
