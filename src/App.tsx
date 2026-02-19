@@ -9,6 +9,7 @@ import type { Session } from "@supabase/supabase-js";
 import Login from "./pages/Login";
 import Index from "./pages/Index";
 import Uploads from "./pages/Uploads";
+import Integrations from "./pages/Integrations";
 import Insights from "./pages/Insights";
 import Roadmap from "./pages/Roadmap";
 import SettingsPage from "./pages/Settings";
@@ -52,6 +53,7 @@ function AppRoutes() {
       <Route path="/" element={session ? <Navigate to="/dashboard" replace /> : <Login />} />
       <Route path="/dashboard" element={<ProtectedRoute session={session}><Index /></ProtectedRoute>} />
       <Route path="/uploads" element={<ProtectedRoute session={session}><Uploads /></ProtectedRoute>} />
+      <Route path="/integrations" element={<ProtectedRoute session={session}><Integrations /></ProtectedRoute>} />
       <Route path="/insights" element={<ProtectedRoute session={session}><Insights /></ProtectedRoute>} />
       <Route path="/roadmap" element={<ProtectedRoute session={session}><Roadmap /></ProtectedRoute>} />
       <Route path="/settings" element={<ProtectedRoute session={session}><SettingsPage /></ProtectedRoute>} />
